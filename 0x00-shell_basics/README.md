@@ -12,3 +12,6 @@
 
 
 ***5-listfilesdigitonly*** : display current directory contents (long format, with user and group IDs displayed numrically, and hidden files)
+
+
+**6-firstdirectory** : creates a directory named  *my_first_directory* in the */tmp/* directory
