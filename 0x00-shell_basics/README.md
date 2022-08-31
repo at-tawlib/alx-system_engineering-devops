@@ -20,4 +20,6 @@
 
 **8-firstdelete** : delete the file betty ( file is in /tmp/my_first_directory)
 
-**9-firstdirdeletion** : delete the directory *my_first_directory* that is the  */tmp * directory
+**9-firstdirdeletion** : delete the directory *my_first_directory* that is the  */tmp* directory
+
+**10-back** : changes the working directory to the previous one
