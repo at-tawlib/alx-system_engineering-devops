@@ -38,3 +38,4 @@
 
 **102-tree** : creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory
 
+**103-commas** : lists all files and directories of current diretory seperated by **,**, directories end with **/**, list including hidden directories, all in alphanumeric order
