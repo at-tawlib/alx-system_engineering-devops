@@ -30,4 +30,6 @@
 
 **13-unique** : takes a list of words as input and prints only words that appear exactly once
 
-**14-findthatword** : isplay lines containing the pattern “root” from the file `/etc/passwd`
+**14-findthatword** : display lines containing the pattern “root” from the file `/etc/passwd`
+
+**15-countthatword** : display the number of lines that contain the pattern “bin” in the file `/etc/passwd`
