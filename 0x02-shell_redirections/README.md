@@ -45,3 +45,5 @@
 **19-AZ** : replace all characters `A` and `c` from input to `Z` and `e` respectively
 
 **20-hiago** : create a script that removes all letters `c` and `C` from input
+
+**21-reverse** : reverses its input
