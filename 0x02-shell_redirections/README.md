@@ -47,3 +47,5 @@
 **20-hiago** : create a script that removes all letters `c` and `C` from input
 
 **21-reverse** : reverses its input
+
+**22-users_and_home** : displays all users and their home directories, sorted by users of the `/ect/passwd` file
