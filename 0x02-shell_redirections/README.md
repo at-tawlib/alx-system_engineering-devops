@@ -49,3 +49,9 @@
 **21-reverse** : reverses its input
 
 **22-users_and_home** : displays all users and their home directories, sorted by users of the `/ect/passwd` file
+
+**100-empty_casks** :  finds all empty files and directories in the current directory and all sub-directories
+-   Hidden files should be listed
+-   One file name per line  
+-   The listing should end with a new line
+-   You are not allowed to use  `basename`,  `grep`,  `egrep`,  `fgrep`  or  `rgrep`
