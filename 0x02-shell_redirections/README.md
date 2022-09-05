@@ -9,3 +9,5 @@
 **3-twofiles** : display the content of _/etc/passwd_ and _/etc/hosts_
 
 **4-lastlines** : display the last 10 lines of _/etc/passwd_
+
+**5-firstlines** : display the first 10 lines of /etc/passwd
