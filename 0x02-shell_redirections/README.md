@@ -64,3 +64,5 @@
 -   One file name per line
 -   The listing should end with a new line
 -   You are not allowed to use  `basename`,  `grep`,  `egrep`,  `fgrep`  or  `rgrep`
+
+**102-arcrostic** : decodes acrostics that use the first letter of each line (the arcrostics file is `AcrosticElizabeth`)
