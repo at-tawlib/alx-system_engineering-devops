@@ -3,3 +3,5 @@
 **0-alias** -creates an alias
 
 **1-hello_you** : prints hello `user`, where user is the current Linux user
+
+**4-global_variables** : lists environment variables
