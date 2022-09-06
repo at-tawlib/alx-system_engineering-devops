@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "enter file name"
+read fileName
+touch $fileName
+chmod u+x $fileName
+echo '#!/bin/bash' > $fileName
+vim $fileName
