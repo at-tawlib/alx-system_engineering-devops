@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# install nginx on webserver
+# should listen on port 80
+
+apt-get install nginx -y
