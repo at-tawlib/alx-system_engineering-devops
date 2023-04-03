@@ -8,6 +8,8 @@ sudo apt-get -y install nginx
 # configure firewall to enable port 80
 sudo ufw allow 'Nginx HTTP'
 
+sudo mkdir -p /var/www/html
+
 # change permission to allow us to create index file
 sudo chmod -R 777 /var/www/html
 
