@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# configure web-02 just like web-01
+
+# install nginx on webserver
+sudo apt-get update
+sudo apt-get -y install nginx
+
+# configure firewall to enable port 80
+sudo ufw allow 'Nginx HTTP'
+
+# change permission to allow us to create index file
+sudo chmod -R 777 /var/www/html
+
+# create new nginx index page
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# create 404 error page
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+# configure redirect for single page
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+
+# configure error 404 page
+string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+# starting nginx
+sevice nginx restart
