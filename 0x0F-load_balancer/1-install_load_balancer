@@ -4,11 +4,8 @@
 
 sudo apt-get -y update
 
-sudo apt-get -y install --no-install-recommends software-properties-common
-
 # install latest stable version
-sudo add-apt-repository ppa:vbernat/haproxy-2.7
-sudo apt-get -y install haproxy=2.7.\*
+sudo apt-get -y install haproxy
 
 # configure HAproxy
 config=\
@@ -17,7 +14,6 @@ frontend azindotech-frontend
     bind *:80
 	mode http
     default_backend azindotech-backend    
-
 backend azindotech-backend
     balance roundrobin
     server 103560-web-01 35.175.105.33:80 check
@@ -28,5 +24,5 @@ echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg
 # enable start by init script
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-# restart nginx
+# restart haproxy
 sudo service haproxy restart
