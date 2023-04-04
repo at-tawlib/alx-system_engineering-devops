@@ -11,7 +11,7 @@ sudo ufw allow 'Nginx HTTP'
 sudo mkdir -p /var/www/html
 
 # change permission to allow us to create index file
-sudo chmod -R 777 /var/www/html
+sudo chmod -R 777 /var/www
 
 # create new nginx index page
 echo "Hello World!" | sudo tee /var/www/html/index.html
