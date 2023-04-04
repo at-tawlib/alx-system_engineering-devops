@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# install and configure HAproxy on lb-01 server and
+# configure it to send traffic to web-01 and web-02 servers using roundrobin
+
+sudo apt-get -y update
+
+sudo apt-get -y install --no-install-recommends software-properties-common
+
+# install latest stable version
+sudo add-apt-repository ppa:vbernat/haproxy-2.7
+sudo apt-get -y install haproxy=2.7.\*
+
+# configure HAproxy
+config=\
+"
+frontend azindotech-frontend
+    bind *:80
+	mode http
+    default_backend azindotech-backend    
+
+backend azindotech-backend
+    balance roundrobin
+    server 103560-web-01 35.175.105.33:80 check
+    server 103560-web-02 52.86.214.98:80 check
+"
+echo "$config" | sudo tee -a /ect/haproxy/haproxy.cfg
+
+# enable start by init script
+echo "ENABLED=1" | sudo tee -a /ect/default/haproxy
+
+# restart nginx
+sudo service haproxy restart
