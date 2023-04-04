@@ -4,20 +4,16 @@ exec { 'update':
   command => 'sudo apt-get-update',
 }
 
-package { 'nginx':
+-> package { 'nginx':
   ensure => 'present',
 }
 
-file { 'header':
+-> file_line { 'header':
   path  => '/etc/nginx/nginx.conf',
   match => 'http {',
   line  => "http {\n\tadd_header X-Served-By \"${hostname}\";",
 }
 
-exec { 'run':
-  command => 'sudo sevice nginx restart',
-}
-
-package { 'HAproxy':
-  ensure  => 'present',
+-> exec { 'run':
+  command => 'sudo service nginx restart',
 }
