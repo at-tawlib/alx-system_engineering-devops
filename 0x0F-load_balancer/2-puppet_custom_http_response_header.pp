@@ -1,7 +1,7 @@
 # use puppet to automate creating HTTP header response
 
-exec {'update':
-  command => 'sudo apt-get update',
+exec {'apt_update':
+  command => '/usr/bin/apt-get update',
 }
 
 -> package { 'nginx':
@@ -15,5 +15,5 @@ exec {'update':
 }
 
 -> exec { 'run':
-  command => 'sudo service nginx restart',
+  command => '/usr/sbin/service nginx restart',
 }
