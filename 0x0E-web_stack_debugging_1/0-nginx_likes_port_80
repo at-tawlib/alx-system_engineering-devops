@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# debug Ubuntu container Nginx listening
 
 # enable configuration in sites-enabled using a symbolic link
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
