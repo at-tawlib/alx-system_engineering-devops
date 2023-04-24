@@ -32,5 +32,5 @@ if __name__ == "__main__":
     # serializing json
     json_obj = json.dumps(dictionary)
     # writing to file
-    with open("todo_all_employees.json", "w") as file:
+    with open("{}.json".format(employee_id), "w") as file:
         file.write(json_obj)
