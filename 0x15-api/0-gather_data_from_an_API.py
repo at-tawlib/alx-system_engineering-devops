@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Use REST API to get employee details
+""" Use REST API to get employee details """
 import requests
 import sys
 
