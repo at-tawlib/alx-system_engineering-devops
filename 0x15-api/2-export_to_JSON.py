@@ -29,8 +29,7 @@ if __name__ == "__main__":
         tasks_list.append(task_dict)
 
     dictionary = {employee_id: tasks_list}
-    # serializing json
-    json_obj = json.dumps(dictionary)
     # writing to file
     with open("{}.json".format(employee_id), "w") as file:
-        file.write(json_obj)
+        # serializing json
+        json.dumps(dictionary, file)
