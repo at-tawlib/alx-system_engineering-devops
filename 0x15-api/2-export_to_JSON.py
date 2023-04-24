@@ -32,4 +32,4 @@ if __name__ == "__main__":
     # writing to file
     with open("{}.json".format(employee_id), "w") as file:
         # serializing json
-        json.dumps(dictionary, file)
+        json.dump(dictionary, file)
