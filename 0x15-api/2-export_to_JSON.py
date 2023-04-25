@@ -14,19 +14,18 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
     # get employee from API (employee name)
     employee = requests.get(url=url)
-    employee_name = employee.json()["name"]
     username = employee.json()["username"]
 
     # get todos
     todos_response = requests.get(url="{}/todos".format(url))
     todos = todos_response.json()
-    task_dict = {}
     tasks_list = []
     for todo in todos:
-        task_dict["task"] = todo["title"]
-        task_dict["completed"] = todo["completed"]
-        task_dict["username"] = username
-        tasks_list.append(task_dict)
+        tasks_list.append({
+            "task": todo["title"],
+            "completed": todo["completed"],
+            "username": username
+            })
 
     dictionary = {employee_id: tasks_list}
     # writing to file
