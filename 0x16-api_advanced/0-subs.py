@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""
+get subscribers count from Reddit API for a given subreddit
+"""
 import requests
 
 
