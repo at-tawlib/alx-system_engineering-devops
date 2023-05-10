@@ -18,14 +18,14 @@ def recurse(subreddit, hot_list=[]):
     response = requests.get(url, headers=agent, params={'after': after},
                             allow_redirects=False)
 
-    if results.status_code == 200:
-        after_results = results.json().get('data').get('after')
+    if response.status_code == 200:
+        after_results = response.json().get('data').get('after')
         if after_results is not None:
             after = after_results
             recurse(subreddit, hot_list)
         titles = results.json().get('data').get('children')
         for title in titles:
-            hot_list.append(title.get('data').get('title')
+            hot_list.append(title.get('data').get('title'))
         return hot_list
     else:
         return None
