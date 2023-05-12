@@ -11,7 +11,7 @@ def top_ten(subreddit):
     for a given subreddit
     """
     if subreddit is None or not isinstance(subreddit, str):
-        return "None"
+        print("None")
 
     url = 'https://www.reddit.com/r/{}/hot/.json'.format(subreddit)
     agent = {'User-agent': 'Google Chrome Version 113.0.5672.63'}
@@ -23,4 +23,4 @@ def top_ten(subreddit):
         for hot in hot_reddits:
             print(hot.get('data').get('title'))
     except Exception:
-        return "None"
+        print("None")
