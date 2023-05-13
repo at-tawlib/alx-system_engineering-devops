@@ -1,4 +1,5 @@
 # 0x19. Postmortem
+![image here](https://www.howtogeek.com/wp-content/uploads/2017/05/Shutterstock_488064745.png?width=1198&trim=1,1&bg-color=000&pad=1,1)
 ## Issue Summary:
 On the 13th May, 2023 from 10:15 AM to 11:30 AM GMT, requests to webservers for content resulted in 500 error response messages. Users were not able to access web contents successfully.
 
