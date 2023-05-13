@@ -1,5 +1,6 @@
 # 0x19. Postmortem
 <img src="https://ginbits.com/wp-content/uploads/2021/08/How-to-Fix-500-Internal-Server-Error.png" alt="error 500" width="1000" height="400">
+
 ## Issue Summary:
 On the 13th May, 2023 from 10:15 AM to 11:30 AM GMT, requests to webservers for content resulted in 500 error response messages. Users were not able to access web contents successfully.
 
