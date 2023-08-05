@@ -27,3 +27,31 @@
 **[12-combinations](12-combinations)**  : prints all possible combinations of two letters, except  `oo`
 
 **[13-print_float](13-print_float)**  : prints a number with two decimal places, followed by a new line
+
+**[100-decimal_to_hexadecimal](100-decimal_to_hexadecimal)** : converts a number from base 10 to base 16.
+
+**[101-rot13](101-rot13)**  : encodes and decodes text using the rot13 encryption. Assume ASCII
+```
+pc@pc:~/shell/fun_with_the_shell$ cat quote
+"Everyone is a proponent of strong encryption."
+- Dorothy E. Denning
+pc@pc:~/shell/fun_with_the_shell$ ./101-rot13 < quote
+"Rirelbar vf n cebcbarag bs fgebat rapelcgvba."
+- Qbebgul R. Qraavat
+pc@pc:~/shell/fun_with_the_shell$
+```
+**[102-odd](102-odd)**:  prints every other line from the input, starting with the first line
+
+**[103-water_and_stir](103-water_and_stir)**: adds the two numbers stored in the environment variables `WATER` and  `STIR` and prints the result
+`STIR`  and prints the result.
+
+-   `WATER`  is in base  `water`
+-   `STIR`  is in base  `stir.`
+-   The result should be in base  `bestchol`
+```
+pc@pc:~$ export WATER="ewwatratewa"
+pc@pc:~$ export STIR="ti.itirtrtr"
+pc@pc:~$ ./103-water_and_stir
+shtbeolhc
+pc@pc:~$
+```
